@@ -2,16 +2,16 @@
 
 class User
 {
-    //old way in php7.4
-    public $name;
-    public $role;
-    public $status;
 
-    public function __construct($name,$role,$status)
+    public function __construct(
+        public $name,
+        public $role,
+        private $status)
     {
-        $this->name = $name;
-        $this->role = $role;
-        $this->status = $status;
 
     }
 }
+
+
+$user = new User('test', 'Tester', 'inactive');
+var_dump($user);
