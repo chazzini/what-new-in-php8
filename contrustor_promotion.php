@@ -2,12 +2,14 @@
 
 class User
 {
-
+    private $status;
+    //public  $name; // cannot be redeclared when using promoter
     public function __construct(
         public $name,
         public $role,
-        private $status)
+        $status)
     {
+        $this->status = $status;//do something with passed in status
 
     }
 }
